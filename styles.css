@@ -54,6 +54,22 @@ body {
     padding-inline: var(--container-padding-x);
 }
 
+a {
+    color: var(--color-light);
+}
+
+a:hover {
+    color: var(--color-light-gray);
+}
+
+a,
+button,
+input,
+textarea,
+svg * {
+    transition-duration: var(--transition-duration);
+}
+
 h1,
 h2,
 h3,
@@ -64,15 +80,123 @@ h6 {
     text-transform: uppercase;
 }
 
+.button {
+    display: inline-flex;
+    height: 38px;
+    align-items: center;
+    padding-inline: 26px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 2;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    border-color: var(--color-light);
+    border: none;
+    border-radius: var(--border-radius);
+    white-space:nowrap;
+
+}
+
+.button:hover {
+    background-color: var(--color-light-gray);
+}
+
 .header {
    display: flex;
    justify-content: space-between;
    align-items: center;
    column-gap: 20px;
+   padding-inline: 32px;
+   
 }
 
+.header-logo{
+    flex-shrink: 0;
+}
 .header-menu-list {
     display: flex;
     column-gap: 50px;
+    flex-wrap: wrap;
 }
 
+.header-menu-link {
+    column-gap: 7px;
+    display: inline-flex;
+    height: 96px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    align-items: center;
+}
+
+.header-menu-link.is-current::after {
+    content: "";
+    
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: currentColor;
+}
+.header-action {
+    display: flex;
+    column-gap: 40px;
+}
+
+.header-burger-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    background-color: transparent;
+    height: 40px;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    color: var(--color-light);
+
+}
+
+.header-burger-button:hover {
+    color: var(--color-light-gray);
+    border-color: var(--color-light-gray);
+}
+
+@media (max-width: 1024px) {
+    .header {
+        flex-wrap: wrap;
+        padding: 20px;
+        row-gap: 10px;
+        padding-inline: 15px;
+    }
+    .header-menu {
+        flex-wrap: wrap;
+        order: 1;
+        flex-basis: 100%;
+        
+    }
+    .header-menu-link {
+        height: 50px;
+    }
+}
+
+@media (max-width:768px) {
+    .button {
+        padding-inline: 18px;
+    }
+    .header {
+        padding: 10px;
+    }
+    
+    .header-menu-list {
+        column-gap: 24px;
+    }
+
+    .header-menu-link {
+        height: 32px;
+    }
+
+    .menu-action {
+        column-gap: 15px;
+    }
+}
