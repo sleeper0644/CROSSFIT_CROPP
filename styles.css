@@ -42,6 +42,7 @@
     --container-width:  1300px;
     --container-padding-x: 15px;
     --transition-duration: 0.2s;
+    --header-height: 90px;
 }
 
 body {
@@ -109,6 +110,7 @@ h6 {
    column-gap: 20px;
    padding-inline: 32px;
    background-color: var(--color-dark-alternate);
+   min-height: var(--header-height);
    
 }
 
@@ -124,7 +126,7 @@ h6 {
 .header-menu-link {
     column-gap: 7px;
     display: inline-flex;
-    height: 96px;
+    height: var(--header-height);
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 700;
@@ -178,7 +180,7 @@ h6 {
 }
 
 .banner {
-    min-height: 985px;
+    min-height: calc(100vh - var(--header-height));
     padding: 36px 70px;
     display: flex;
     flex-direction: column;
@@ -195,7 +197,7 @@ h6 {
 .banner-info {
     display: flex;
     align-items: end;
-    font-size: 38px;
+    font-size: clamp(16px, 1.56,30px);
     line-height: 1.27;
     font-weight: 700;
     
@@ -203,14 +205,14 @@ h6 {
 
 .banner-info::before {
     content: "";
-    width: 194px;
+    width: clamp(60px, 10.1vw, 194px);
     aspect-ratio: 1;
     background: url(./icons/bold-arrow-right-down.svg) center/contain no-repeat;
     margin-right: 30px;
 }
 
 .banner-tittle {
-    font-size: 360px;
+    font-size: min(18.75vw, 360px);
     line-height: 1;
 
 }
@@ -264,7 +266,16 @@ h6 {
         flex-wrap: wrap;
         padding: 20px;
         row-gap: 10px;
+        
+    }
+
+    .header,
+    .banner {
         padding-inline: 15px;
+    }
+
+    .banner {
+        row-gap: 10px;
     }
     .header-menu {
         flex-wrap: wrap;
@@ -275,6 +286,7 @@ h6 {
     .header-menu-link {
         height: 50px;
     }
+
 }
 
 @media (max-width:768px) {
@@ -295,6 +307,14 @@ h6 {
 
     .menu-action {
         column-gap: 15px;
+    }
+
+    .banner-info::before{
+        margin-right: 10px;
+    }
+
+    .banner-info {
+        margin-bottom: 5px;
     }
 }
 
