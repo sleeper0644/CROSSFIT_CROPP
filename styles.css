@@ -96,7 +96,6 @@ h6 {
     border: none;
     border-radius: var(--border-radius);
     white-space:nowrap;
-
 }
 
 .button:hover {
@@ -111,12 +110,12 @@ h6 {
    padding-inline: 32px;
    background-color: var(--color-dark-alternate);
    min-height: var(--header-height);
-   
 }
 
 .header-logo{
     flex-shrink: 0;
 }
+
 .header-menu-list {
     display: flex;
     column-gap: 50px;
@@ -137,12 +136,12 @@ h6 {
 
 .header-menu-link.is-current::after {
     content: "";
-    
     width: 5px;
     height: 5px;
     border-radius: 50%;
     background-color: currentColor;
 }
+
 .header-action {
     display: flex;
     column-gap: 40px;
@@ -158,7 +157,6 @@ h6 {
     border: var(--border);
     border-radius: 50%;
     color: var(--color-light);
-
 }
 
 .header-burger-button:hover {
@@ -191,7 +189,6 @@ h6 {
 
 .banner-body {
     text-transform: uppercase;
-
 }
 
 .banner-info {
@@ -200,7 +197,6 @@ h6 {
     font-size: clamp(16px, 1.56,30px);
     line-height: 1.27;
     font-weight: 700;
-    
 }
 
 .banner-info::before {
@@ -214,14 +210,12 @@ h6 {
 .banner-tittle {
     font-size: min(18.75vw, 360px);
     line-height: 1;
-
 }
 
 .banner-pagination-list {
     display: flex;
     justify-content: center;
     column-gap: 14px;
-
 }
 
 .banner-pagination-items {
@@ -241,32 +235,11 @@ h6 {
     background-color: var(--color-light);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 1024px) {
     .header {
         flex-wrap: wrap;
         padding: 20px;
         row-gap: 10px;
-        
     }
 
     .header,
@@ -277,22 +250,22 @@ h6 {
     .banner {
         row-gap: 10px;
     }
+
     .header-menu {
         flex-wrap: wrap;
         order: 1;
         flex-basis: 100%;
-        
     }
     .header-menu-link {
         height: 50px;
     }
-
 }
 
 @media (max-width:768px) {
     .button {
         padding-inline: 18px;
     }
+    
     .header {
         padding: 10px;
     }
