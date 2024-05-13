@@ -26,6 +26,7 @@
 
 :root {
     --color-dark: #000000;
+    --color-dark-alternate:#131619;
     --color-light: #ffffff;
     --color-dark-gray: #404040;
     --color-light-gray: #C4C4C4;
@@ -107,6 +108,7 @@ h6 {
    align-items: center;
    column-gap: 20px;
    padding-inline: 32px;
+   background-color: var(--color-dark-alternate);
    
 }
 
@@ -152,7 +154,7 @@ h6 {
     background-color: transparent;
     height: 40px;
     border: var(--border);
-    border-radius: var(--border-radius);
+    border-radius: 50%;
     color: var(--color-light);
 
 }
@@ -161,6 +163,101 @@ h6 {
     color: var(--color-light-gray);
     border-color: var(--color-light-gray);
 }
+
+.visually-hiden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    bottom: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+}
+
+.banner {
+    min-height: 985px;
+    padding: 36px 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    color: var(--color-light);
+    background-color: var(--color-dark-alternate);
+}
+
+.banner-body {
+    text-transform: uppercase;
+
+}
+
+.banner-info {
+    display: flex;
+    align-items: end;
+    font-size: 38px;
+    line-height: 1.27;
+    font-weight: 700;
+    
+}
+
+.banner-info::before {
+    content: "";
+    width: 194px;
+    aspect-ratio: 1;
+    background: url(./icons/bold-arrow-right-down.svg) center/contain no-repeat;
+    margin-right: 30px;
+}
+
+.banner-tittle {
+    font-size: 360px;
+    line-height: 1;
+
+}
+
+.banner-pagination-list {
+    display: flex;
+    justify-content: center;
+    column-gap: 14px;
+
+}
+
+.banner-pagination-items {
+    display: flex;
+}
+
+.banner-pagination-button {
+    width: 10px;
+    aspect-ratio: 1;
+    padding: 0;
+    background-color: transparent;
+    border: 1px solid var(--color-light) ;
+    border-radius: 50%;
+}
+
+.banner-pagination-button.is-current {
+    background-color: var(--color-light);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 1024px) {
     .header {
@@ -200,3 +297,4 @@ h6 {
         column-gap: 15px;
     }
 }
+

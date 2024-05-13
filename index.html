@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header"> 
         <a href="/" class="header-logo">
             <img src="./images/logo.png" alt="Krop logo" width="135" height="25" loading="lazy" class="header-logo-image">
         </a>
@@ -34,7 +34,10 @@
             <button class="header-book-button button" type="button">
                 Book now
             </button>
-            <button class="header-burger-button" type="button">
+            <button class="header-burger-button" type="button" title="Open Menu">
+                <span class="visually-hiden">
+                    Open Menu
+                </span>
                 <svg width="23" height="12" viewBox="0 0 23 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.5 1H22.5" stroke="white" stroke-dasharray="22 22"/>
                     <path d="M0.5 1H22.5" stroke="white" stroke-dasharray="22 22"/>
@@ -42,10 +45,35 @@
                     <path d="M0.5 6H22.5" stroke="white" stroke-dasharray="22 22"/>
                     <path d="M0.5 11H22.5" stroke="white" stroke-dasharray="22 22"/>
                     <path d="M0.5 11H22.5" stroke="white" stroke-dasharray="22 22"/>
-                    </svg>
-                    
+                    </svg>  
             </button>
         </div>
     </header>
+    <main class="content">
+        <h1 class="visually-hiden">kropp fitness club</h1>
+        <section class="banner">
+            <h2 class="visually-hiden">Upcomings events</h2>
+            <div class="banner-body">
+                <div class="banner-info">
+                    New event <br />
+                    coming up / <time datetime="06-07">june 7</time>&nbsp;-&nbsp;<time datetime="06-13">13</time>
+                </div>
+                <h3 class="banner-tittle">crossfit</h3>
+            </div>
+            <div class="banner-pagination">
+                <ul class="banner-pagination-list">
+                    <li class="banner-pagination-item">
+                        <button class="banner-pagination-button" type="button"></button>
+                    </li>
+                    <li class="banner-pagination-item">
+                        <button class="banner-pagination-button" type="button"></button>
+                    </li>
+                    <li class="banner-pagination-item">
+                        <button class="banner-pagination-button is-current" type="button"></button>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
