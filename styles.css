@@ -81,6 +81,7 @@ h5,
 h6 {
     font-weight: 700;
     text-transform: uppercase;
+    color: var(--color-light);
 }
 
 p:not([class]):not(:last-child) {
@@ -334,10 +335,46 @@ p:not([class]):not(:last-child) {
     max-width: 400px;
 }
 
+.treaning-types {
+    background-color: var(--color-dark);
+    position: relative;
+    max-width: 1920px;
+    margin-inline: auto;
+    padding-top: 70px;
+    padding-bottom: 120px;
+}
+
+.treaning-types-list {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 60px;
+}
+
+.treaning-types-item {
+    --icon-size:80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 32px;
+    padding-top: var(--icon-size);
+    background: url(./icons/right-top-left-bottom-arrow.svg)100% 0/var(--icon-size) no-repeat;
+
+}
+
+.treaning-types-item-title {
+    font-size: 16px;
+}
+
 @media (max-width: 1919px){
     .motivation-card-image {
         margin-block: -20px;
         
+    }
+}
+
+@media (max-width:1280px) {
+    .treaning-types-list{
+        grid-template-columns: repeat(3,1fr);
     }
 }
 
@@ -424,5 +461,20 @@ p:not([class]):not(:last-child) {
     .motivation-card-description:not(:last-child) {
         margin-bottom: 20px;
     }
+
+    .treaning-types-list{
+        grid-template-columns: repeat(2,1fr);
+        gap: 30px;
+    }
+
+    .treaning-types-item {
+        --icon-size:50px;
+        row-gap: 10px;
+    }
+    
+    .treaning-type-image {
+        max-width: 120px;
+    }
 }
+
 
