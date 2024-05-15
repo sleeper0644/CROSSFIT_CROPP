@@ -302,6 +302,10 @@ p:not([class]):not(:last-child) {
     color: var(--color-light);
 }
 
+.title-big {
+    font-size: clamp(24px, 3.12vh, 60px);
+}
+
 .backdrop-tittle {
     position: relative;
     z-index: 2;
@@ -363,6 +367,87 @@ p:not([class]):not(:last-child) {
 
 .treaning-types-item-title {
     font-size: 16px;
+}
+
+.join-us-video-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 30px;
+    background: url(./images/join-us/join-us-bg.jpg) center/cover no-repeat var(--color-dark-alternate);
+}
+
+.join-us-video-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 200px;
+    aspect-ratio: 1;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 50%;
+    border: var(--border);
+    column-gap: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-light);
+}
+
+.join-us-video-play-button:hover {
+    background-color: var(--color-light-gray);
+    opacity: 0.3;
+    color: var(--color-dark);
+    
+}
+
+.join-us-video-play-button::after {
+    content: "";
+    width: 26px;
+    aspect-ratio: 1;
+    background: url(./icons/left-bottom-right-top-svg.svg) center/contain no-repeat;
+
+}
+
+.join-us-video-play-button:hover::after {
+    filter: invert(1);
+}
+
+.join-us-body {
+    padding-bottom: 150px;
+}
+
+.join-us-title {
+    font-size: clamp(64px, 9.37vw, 180px);
+    line-height: 1;
+    text-align: center;
+    margin-top: -0.35em;
+    position: relative;
+}
+
+.join-us-title::after {
+    content: "";
+    display: inline-block;
+    height: 0.70em;
+    aspect-ratio: 1;
+    margin-left: 0.14em;
+    background: url(./icons/bold-arrow-right-down.svg) center/contain no-repeat;
+    scale: 1 -1;
+}
+
+.join-us-title:not(:last-child) {
+    margin-bottom: 130px;
+}
+
+.join-us-form-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 7px;
 }
 
 @media (max-width: 1919px){
