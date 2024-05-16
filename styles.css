@@ -111,6 +111,7 @@ p:not([class]):not(:last-child) {
     padding-right: 80px;
     background-color: transparent;
     border: var(--border);
+    color: var(--color-light);
 }
 
 .button.transparent::after {
@@ -127,6 +128,31 @@ p:not([class]):not(:last-child) {
 
 .button:hover {
     background-color: var(--color-light-gray);
+}
+
+input {
+    width: 100%;
+    height: var(--input-height);
+    padding-inline: 25px ;
+    background-color: transparent;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    color: var(--color-light);
+}
+
+.input::placeholder {
+    color: var(--color-light-gray);
+}
+
+.input:hover {
+    border-color: var(--color-light-gray);
+}
+
+input:focus {
+    background-color: var(--color-light-gray);
+    color: var(--color-dark);
+    outline: none;
+    
 }
 
 .header {
@@ -234,7 +260,7 @@ p:not([class]):not(:last-child) {
     margin-right: 30px;
 }
 
-.banner-tittle {
+.banner-title {
     font-size: min(18.75vw, 360px);
     line-height: 1;
 }
@@ -306,13 +332,13 @@ p:not([class]):not(:last-child) {
     font-size: clamp(24px, 3.12vh, 60px);
 }
 
-.backdrop-tittle {
+.backdrop-title {
     position: relative;
     z-index: 2;
 
 }
 
-.backdrop-tittle::before {
+.backdrop-title::before {
     content: '';
     display: block;
     position: absolute;
@@ -322,12 +348,12 @@ p:not([class]):not(:last-child) {
     background: url(./icons/plus.svg) center/contain no-repeat;
 } 
 
-.backdrop-tittle::after {
+.backdrop-title::after {
     position: absolute;
     z-index: -1;
     top: -0.45em;
     left: -0.6em;
-    content: attr(data-tittle);
+    content: attr(data-title);
     color: transparent;
     -webkit-text-stroke: 1px var(--color-light-gray);
     text-stroke: 1px var(--color-light-gray);
@@ -337,6 +363,12 @@ p:not([class]):not(:last-child) {
 
 .motivation-card-description {
     max-width: 400px;
+}
+
+.backdrop-title.centered::after {
+    top: -0.55em;
+    left: 50%;
+    translate: -50% 0;
 }
 
 .treaning-types {
@@ -448,6 +480,27 @@ p:not([class]):not(:last-child) {
     flex-direction: column;
     align-items: center;
     row-gap: 7px;
+}
+
+.join-us-form-header:not(:last-child) {
+    margin-bottom: 52px;
+}
+
+.join-us-form-subtitle {
+    font-size: 20px;
+    line-height:1.65em;
+    text-transform: uppercase;
+    color: var(--color-light);
+}
+
+.join-us-form-input {
+    width: 400px;
+}
+
+.join-us-form-body {
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
 }
 
 @media (max-width: 1919px){
