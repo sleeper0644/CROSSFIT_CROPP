@@ -89,6 +89,11 @@ p:not([class]):not(:last-child) {
     margin-bottom: 24px;
 }
 
+.container-wide {
+    max-width: 1920px;
+    margin-inline: auto;
+}
+
 .button {
     display: inline-flex;
     height: 38px;
@@ -352,7 +357,7 @@ input:focus {
 .backdrop-title::after {
     position: absolute;
     z-index: -1;
-    top: -0.45em;
+    top: -0.3em;
     left: -0.6em;
     content: attr(data-title);
     color: transparent;
@@ -360,6 +365,7 @@ input:focus {
     text-stroke: 1px var(--color-light-gray);
     font-size: 2.8em;
     font-family:var(--font-family-accent);
+    line-height: 1;
 }
 
 .motivation-card-description {
@@ -367,10 +373,12 @@ input:focus {
 }
 
 .backdrop-title.centered::after {
-    top: -0.55em;
+    top: -0.25em;
     left: 50%;
     translate: -50% 0;
 }
+
+
 
 .treaning-types {
     background-color: var(--color-dark);
@@ -396,6 +404,10 @@ input:focus {
     padding-top: var(--icon-size);
     background: url(./icons/right-top-left-bottom-arrow.svg)100% 0/var(--icon-size) no-repeat;
 
+}
+
+.join-us {
+    background-color: var(--color-dark);
 }
 
 .treaning-types-item-title {
@@ -509,6 +521,33 @@ input:focus {
     display: flex;
     justify-content: center;
     column-gap: 20px;
+}
+
+.location {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.location-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 15px;
+    text-align: center;
+    
+}
+
+.location-title:not(:last-child) {
+    margin-bottom: 14px;
+}
+
+.location-description {
+    max-width: 490px;
+}
+
+.location-description:not(:last-child) {
+    margin-bottom: 37px;
 }
 
 @media (max-width: 1919px){
