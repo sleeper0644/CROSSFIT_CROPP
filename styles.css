@@ -616,12 +616,13 @@ input:focus {
 }
 
 
-.calculate-descrip {
+.calculate-description {
     max-width: 385px;
+    
 }
 
-.calculate-descrip:not(:last-child) {
-    margin-bottom: 16px;
+.calculate-description:not(:last-child) {
+    margin-bottom: 30px;
 }
 
 .calculate-form-body {
