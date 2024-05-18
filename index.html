@@ -238,7 +238,7 @@
             </div>
 
         </section>
-        <div class="family">
+        <section class="family">
             <header class="family-header container">
                 <h2 data-title="part" class="family-title title-big backdrop-title centered">
                     be a part of our fit family
@@ -254,7 +254,89 @@
                 <img src="./images/family/4.jpg" width="396" height="479" alt="training people" class="family-image">
                 <img src="./images/family/5.jpg" width="414" height="479" alt="training people" class="family-image">
             </div>
-        </div>
+        </section>
+        <section class="calculate">
+            <div class="calculate-inner container">
+                <div class="calculate-body">
+                    <h2 class="calculate-title title-medium backdrop-title centered" data-title= "bmi">
+                        Input your BMI
+                    </h2>
+                    <div class="calculate-description">
+                        <p>
+                            Duo graece ponderum ne, ei mel aliquando. Pro te tamquam nonumes, nam no nemore epicurei
+                        </p>
+                    </div>
+                    <form  class="calculate-form">
+                        <div class="calculate-form-body">
+                            <label for="height" class="visually-hiden">Height / cm</label>
+                            <input
+                                id="height" 
+                                type="number" 
+                                class="calculate-input input"
+                                placeholder="Height / cm">
+                             <label for="weight" class="visually-hiden">Weight / kg</label>
+                            <input
+                                id="weight" 
+                                type="number" 
+                                class="calculate-input input"
+                                placeholder="Weight / kg">
+                            <label for="age" class="visually-hiden">Age</label>
+                            <input
+                                id="age" 
+                                type="number" 
+                                class="calculate-input input"
+                                placeholder="Age">
+                            <label for="gender" class="visually-hiden">Gender</label>
+                            <select class="calculate-input input " id="gender" required>
+                                <option value="" disabled selected>Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select> 
+                            <label for="activity-factor" class="visually-hiden">activity factor</label>
+                            <select class="calculate-input input wide" id="activity-factor" required>
+                                <option value="" disabled selected>Select an activity factor</option>
+                                <option value="male">1</option>
+                                <option value="female">2</option>
+                            </select>    
+                        </div>
+                        <button class="calculate-button button transparent" type="submit">Calculate</button>
+                    </form>
+                </div>
+                <div class="calculate-table-wrapper">
+                    <table class="calculate-table">
+                        <thead>
+                            <tr>
+                                <th>BMI</th>
+                                <th>Weight status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Below 18.5</td>
+                                <td>Underweight</td>
+                            </tr>
+                            <tr>
+                                <td>18.5 - 24.9</td>
+                                <td>Healthy</td>
+                            </tr>
+                            <tr>
+                                <td>25.0 - 29.9</td>
+                                <td>Overweight</td>
+                            </tr>
+                            <tr>
+                                <td>30.0 - and Above</td>
+                                <td>Obese</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="2"><b>BMR</b>  Metabolic Rate / <b>BMI</b>  Body Mass Index</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </section>
     </main>
 </body>
 </html>
