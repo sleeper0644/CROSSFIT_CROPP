@@ -783,7 +783,30 @@ input:focus {
     .family-image {
         height: 360px;
     }
+    .calculate {
+        padding-block: 100px;
+    }
 
+    .calculate-inner{
+        column-gap: 20px;
+    }
+
+    .calculate-form-body {
+        grid-template-columns: 1fr;
+    }
+
+    .calculate-button {
+        width: 100%;
+    }
+
+    .calculate-table :is(td, th) {
+        padding-block: 10px;
+    }
+
+    .calculate-table tfoot td{
+        padding-top: 10px;
+    }
+    
 }
 
 @media (max-width:767px) {
@@ -884,6 +907,19 @@ input:focus {
 
     .family-body {
         column-gap: 12px;
+    }
+
+    .calculate-inner {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    .calculate-table-wrapper::before{
+        display: none;
+    }
+
+    .calculate{
+        padding-bottom: 60px;
     }
 }
 
